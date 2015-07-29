@@ -1,0 +1,19 @@
+
+<% @posts.each do |post| %>
+  <ul>
+
+    <li class ="post_title"><h2><%= post.title %></h2></li>
+
+    <li class ="tags"><%= post.tags %> </li>
+    <li class ="post_body"><%= post.body %> </li>
+    <%= link_to "Comments (#{ post.comments.count})",post_path(post) %>
+    <p>
+    <%= link_to "edit", edit_post_path(post),class:"button" %>
+    <%= link_to "delete",post_path(post),class:"button",method: :delete%>
+   </p>
+  </ul>
+<% end  %>
+<ul>
+  <li><%= link_to "New Post", new_post_path%></li>
+
+</ul>

@@ -1,0 +1,30 @@
+<ul>
+  <li><%= link_to "New Post", new_post_path%></li>
+
+</ul>
+
+<h1>invidiual blog posts</h1>
+<p> title : <%= @post.title %> </p>
+<p> tag : <%= @post.tags %> </p>
+<p> body: <%= @post.body %> </p>
+
+<h2>Comments:</h2>
+<% @post.comments.each do |comment| %>
+  <p> User Commenter: <%= comment.commenter %> </p>
+  <p> Comment:<%= comment.body %> </p>
+  <%= link_to "delete", [comment.post, comment ], method: :delete %>
+<% end %>
+
+<h2>Add Comments</h2>
+<%= form_for ([@post,@post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter  %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+<p> <%= f.submit %> </p>
+
+<% end %>

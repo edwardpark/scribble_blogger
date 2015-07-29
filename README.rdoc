@@ -1,0 +1,26 @@
+== README
+Model after www.medium.com
+
+V1.
+As a User, I want to see a homepage, so that I can have a starting point.
+As a User, I want to see all of my blog posts, so I can review through them.
+As a User, I want to create a new blog post, so I can create narrative.
+As a User, I want to see a single blog post, so I can read and review it.
+As a User, I want to edit and update any blog post, so I can fix and edit my posts.
+As a User, I want to delete any blog post, so that I correct any mistakes I might of published.
+
+As a User, I want to validate my form submissions, so that I make sure I enter in all the right info
+As a User, I want to be able to write comments, so that my friends can leave messages for me.
+
+V2.
+REFACTOR Cycle 1
+
+As a User, I want to be able to create a account, so I can be the only one making my posts and posting comments under my name.[devise]
+As a User, I want to be able to add a picture to my User profile, because I would like to see a fun picture of myself [paperclip]
+As a User, I want to tag my blog posts, so that I can see common themes
+As a User, I want to be able to search my blog posts, so I can quickly look through old posts.
+
+V3.
+transfer => Bootstrap
+pagination gem: pages through 5 or 10 at a time
+Deploy to Heroku

@@ -1,0 +1,13 @@
+<%= form_for @post do |f|  %>
+  <p>
+    Blog Post Title: <%= f.text_field :title %>
+    Category Tags: <%= f.text_field :tags %>
+  </p>
+
+  <p>
+    Body: <%= f.text_area :body %>
+  </p>
+
+  <p> <%= f.submit   %> </p>
+
+<% end  %>
